@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Dominoes {
@@ -8,7 +9,20 @@ public class Dominoes {
     // Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides
     // eg: [2, 4], [4, 3], [3, 5] ...
 
+    System.out.println(dominoes);
 
+    for (int i = 0; i <dominoes.size() ; i++) {
+      for (int j = 1; j < dominoes.size(); j++) {
+        if (dominoes.get(i).getValues()[1] == dominoes.get(j).getValues()[0]){
+          dominoes.add(i+1,dominoes.get(j));
+          dominoes.remove(j+1);
+        } else {
+
+        }
+      }
+    }
+
+    //System.out.println(dominoes.get(0).getValues()[0]);
 
     System.out.println(dominoes);
   }
