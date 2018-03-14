@@ -5,6 +5,7 @@ public class Fish {
   private int weight;
   private String color;
   int gain;
+  String specialStatus;
 
   public Fish(String name, int weight, String color) {
     this.name = name;
@@ -17,7 +18,7 @@ public class Fish {
   }
 
   public int getGain(){
-    return  gain;
+    return gain;
     }
 
   public int getWeight(){
@@ -28,8 +29,11 @@ public class Fish {
     this.weight = newWeight;
   }
 
+  public String getSpecialStatus(){
+    return specialStatus;
+  }
   public String fishStatus(){
     String status="";
-    return status = getName() + ", weight: " + getWeight() + ", color: " + color + "\n";
+    return status = getName() + ", weight: " + getWeight() + ", color: " + color + ", " + getSpecialStatus() + "\n";
   }
 }
