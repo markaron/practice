@@ -7,10 +7,10 @@ import java.util.List;
 
 public class Crashes {
   public static void main(String[] args) {
-    countCrashesByWeather();
+    countCrashesByGoodWeather();
   }
 
-  public static void countCrashesByWeather() {
+  public static int countCrashesByGoodWeather() {
     String fileName = "crashes.csv";
     Path crashesFile = Paths.get(fileName);
     int goodWeather = 0;
@@ -41,5 +41,6 @@ public class Crashes {
     }
     System.out.println("The amount of crashes at good weather conditions: " + goodWeather);
     System.out.println("The amount of crashes at bad weather conditions: " + badWeather);
+    return goodWeather;
   }
 }
