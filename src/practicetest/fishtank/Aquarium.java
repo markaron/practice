@@ -28,5 +28,13 @@ public class Aquarium {
       aquarium.get(i).setWeight(aquarium.get(i).getGain() + aquarium.get(i).getWeight());
       }
     }
+
+    public void removeOversizedFishes(){
+      for (int i = 0; i <aquarium.size() ; i++) {
+        if (aquarium.get(i).getWeight() <=  11){
+          aquarium.remove(i);
+        }
+      }
+    }
   }
 
