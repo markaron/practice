@@ -22,4 +22,11 @@ public class Aquarium {
     String status = tempString.toString();
     return status;
   }
-}
+
+  public void feed(){
+    for (int i = 0; i <aquarium.size() ; i++) {
+      aquarium.get(i).setWeight(aquarium.get(i).getGain() + aquarium.get(i).getWeight());
+      }
+    }
+  }
+
