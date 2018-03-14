@@ -1,5 +1,4 @@
 package practicetest;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,22 +15,24 @@ public class Crashes {
     Path crashesFile = Paths.get(fileName);
     int goodWeather = 0;
     int badWeather = 0;
-
     try {
       List<String> fileContent = Files.readAllLines(crashesFile);
-      
+
       for (int i = 0; i < fileContent.size(); i++) {
-        if (fileContent.get(i).contains(";CLOUDY;") || fileContent.get(i).contains(";CLEAR;")) {
+        String line = fileContent.get(i);
+        String[] lineIndex = line.split(";");
+
+        if (lineIndex[5].equals("CLOUDY") || lineIndex[5].equals("CLEAR")) {
           goodWeather++;
-        } else if (fileContent.get(i).contains(";RAIN;")) {
+        } else if (lineIndex[5].equals("RAIN")) {
           badWeather++;
-        } else if (fileContent.get(i).contains(";FREEZING RAIN;")) {
+        } else if (lineIndex[5].equals("FREEZING RAIN")) {
           badWeather++;
-        } else if (fileContent.get(i).contains(";SNOW;")) {
+        } else if (lineIndex[5].equals("SNOW")) {
           badWeather++;
-        } else if (fileContent.get(i).contains(";FOG;")) {
+        } else if (lineIndex[5].equals("FOG")) {
           badWeather++;
-        } else if (fileContent.get(i).contains(";SEVERE CROSSWINDS;")) {
+        } else if (lineIndex[5].equals("SEVERE CROSSWINDS")) {
           badWeather++;
         }
       }
@@ -40,6 +41,5 @@ public class Crashes {
     }
     System.out.println("The amount of crashes at good weather conditions: " + goodWeather);
     System.out.println("The amount of crashes at bad weather conditions: " + badWeather);
-    System.out.println(actual);
   }
 }
