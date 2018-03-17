@@ -1,7 +1,7 @@
 package gardenapp;
 
 public class Plants {
-  private int currentWaterAmount;
+  private double currentWaterAmount;
   double waterAbsorb;
   private String color;
   String type;
@@ -12,12 +12,12 @@ public class Plants {
     this.currentWaterAmount = currentWaterAmount;
   }
 
-  public int getCurrentWaterAmount() {
+  public double getCurrentWaterAmount() {
     return currentWaterAmount;
   }
 
   public void setCurrentWaterAmount(int currentWaterAmount) {
-    this.currentWaterAmount = currentWaterAmount;
+    this.currentWaterAmount = currentWaterAmount * waterAbsorb;
   }
 
   public String getColor(){
@@ -33,7 +33,7 @@ public class Plants {
     if (this.isThirsty()){
       return output = "needs water";
     } else {
-      return output = "dosen't need water";
+      return output = "doesn't need water";
     }
   }
 
