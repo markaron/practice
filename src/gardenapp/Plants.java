@@ -20,6 +20,10 @@ public class Plants {
     this.currentWaterAmount = currentWaterAmount * waterAbsorb;
   }
 
+  public void setCurrentWaterAmountForFlower(int currentWaterAmount){
+    this.currentWaterAmount = currentWaterAmount * Flower.getWaterAbsorb();
+  }
+
   public String getColor(){
     return color;
   }
