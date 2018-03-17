@@ -12,7 +12,7 @@ public class FishTank {
     System.out.println(aquarium.status());
     aquarium.feed();
     aquarium.removeOversizedFishes();
-    
+
     System.out.println(aquarium.status());
   }
 }
