@@ -28,4 +28,12 @@ public class Aquarium {
     String result = output.toString();
     return result;
   }
+
+  public void removeOversizedFishes(){
+    for (int i = 0; i <aquarium.size() ; i++) {
+      if (aquarium.get(i).getWeight() >= 11){
+        aquarium.remove(i);
+      }
+    }
+  }
 }

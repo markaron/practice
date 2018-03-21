@@ -17,10 +17,6 @@ public class Fish {
     this.gain = newGain;
   }
 
-  public int getGain() {
-    return gain;
-  }
-
   public String getName() {
     return name;
   }
@@ -38,7 +34,7 @@ public class Fish {
   }
 
   public String statusFish(){
-    String output = name + ", weight: " + weight + ", color: " + color;
+    String output = name + ", weight: " + weight + ", color: " + color + "\n";
     return output;
   }
 }

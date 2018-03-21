@@ -12,4 +12,11 @@ public class Tang extends Fish {
   public boolean isMemory() {
     return memory;
   }
+
+  @Override
+  public String statusFish() {
+    String output = getName() + ", weight: " + getWeight() + ", color: " + getColor() + ", short term memory loss: " +
+            isMemory() + "\n";
+    return output;
+  }
 }
