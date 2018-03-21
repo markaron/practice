@@ -10,7 +10,22 @@ public class Aquarium {
     aquarium = new ArrayList<>();
   }
 
-  public void add(){
-    aquarium.add(Fish);
+  public void add(Fish fish){
+    aquarium.add(fish);
+  }
+
+  public void feed(){
+    for (int i = 0; i <aquarium.size() ; i++) {
+      aquarium.get(i).setWeight();
+    }
+  }
+
+  public String status(){
+    StringBuilder output = new StringBuilder();
+    for (int i = 0; i < aquarium.size(); i++) {
+      output.append(aquarium.get(i).statusFish());
+    }
+    String result = output.toString();
+    return result;
   }
 }

@@ -17,12 +17,28 @@ public class Fish {
     this.gain = newGain;
   }
 
-  public String status(){
-    String output = "";
-    return output;
+  public int getGain() {
+    return gain;
   }
 
-  public void feed (){
-    this.weight += this.gain;
+  public String getName() {
+    return name;
+  }
+
+  public int getWeight() {
+    return weight;
+  }
+
+  public  int setWeight(){
+    return weight += gain;
+  }
+
+  public String getColor() {
+    return color;
+  }
+
+  public String statusFish(){
+    String output = name + ", weight: " + weight + ", color: " + color;
+    return output;
   }
 }
