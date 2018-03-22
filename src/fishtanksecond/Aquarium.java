@@ -25,8 +25,7 @@ public class Aquarium {
     for (int i = 0; i < aquarium.size(); i++) {
       output.append(aquarium.get(i).statusFish());
     }
-    String result = output.toString();
-    return result;
+    return output.toString();
   }
 
   public void removeOversizedFishes(){
